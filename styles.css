@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1.5s ease-in-out;
+}
+
+#banner {
+    background: red;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out, bounce 2s infinite alternate, glow 2s infinite alternate;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #00f; }
+    100% { box-shadow: 0 0 15px #00f; }
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+#loadingMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: darkred;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.ad-popup {
+    position: fixed;
+    background: yellow;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px black;
+    animation: popUp 1s ease-in-out;
+}
+
+.ad-popup img {
+    width: 100%;
+    max-width: 200px;
+}
+
+@keyframes popUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+}
