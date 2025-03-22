@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Lookup</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="banner">?? It’s illegal to intercept someone’s privacy.</div>
+
+    <div class="container animated-box">
+        <h1>Find Owner of Phone Number</h1>
+        <p>Enter a mobile number to search.</p>
+        <input type="text" id="phoneInput" placeholder="Enter mobile number">
+        <button onclick="startVerification()">Search</button>
+
+        <div id="verificationSection" class="hidden">
+            <p>?? Are you a robot?</p>
+            <button onclick="puzzleQuestion()">No, I'm human</button>
+        </div>
+
+        <div id="puzzleSection" class="hidden">
+            <p>Solve this to continue:</p>
+            <span id="puzzleQuestion"></span>
+            <input type="text" id="puzzleAnswer">
+            <button onclick="checkPuzzle()">Submit</button>
+        </div>
+
+        <div id="loadingMessage" class="hidden"></div>
+        <div id="resultMessage" class="hidden"></div>
+    </div>
+
+    <!-- Fake Ad Popups -->
+    <div class="ad-popup hidden" id="ad1">
+        <img src="https://i.ibb.co/whH1ncHF/download.jpg" alt="Ad Image">
+        <button onclick="closeAd('ad1')">Close</button>
+    </div>
+    <div class="ad-popup hidden" id="ad2">
+        <img src="https://i.ibb.co/Jj5mVkmZ/Win-Victory-Vector-PNG-Images-Win-Popup-Victory-Dialog-With-Red-Ribbon-Win-Win-Popup-Victory-PNG-Ima.jpg" alt="Ad Image">
+        <button onclick="closeAd('ad2')">Close</button>
+    </div>
+    <div class="ad-popup hidden" id="ad3">
+        <img src="https://i.ibb.co/Jjr8bGp9/Free-Vector-Colorful-promotion-pop-up-with-flat-design.jpg" alt="Ad Image">
+        <button onclick="closeAd('ad3')">Close</button>
+    </div>
+</body>
+</html>
